@@ -23,3 +23,6 @@
 - git branch -M main
 - git push -u origin main
 
+#setup routing
+- npm i -D react-router-dom
+
