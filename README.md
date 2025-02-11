@@ -18,3 +18,8 @@
 - Netflix GPT
   - Searchbar
   - Movie Suggessions
+
+- git remote add origin https://- github.com/madhuribadgujar/netflixGPT.git
+- git branch -M main
+- git push -u origin main
+
