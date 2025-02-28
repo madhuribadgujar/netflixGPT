@@ -4,12 +4,15 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { addUser, removeUser } from '../utils/userSlice'
-import { LOGO, photoURL } from '../utils/constants'
+import { LOGO, photoURL, SUPPORTED_LANG } from '../utils/constants'
+import { toggleGptSearchView } from '../utils/gptSlice'
+import { changeLang } from '../utils/appConfigSlice'
 
 const Header = () => {
   const navigate = useNavigate()
   const user = useSelector(store => store.user)
   const dispatch = useDispatch()
+  const showGptSearch = useSelector(store => store.gpt.showGptSearch)
 
   const handleSignOut = () => {
     signOut(authData)
@@ -45,11 +48,35 @@ const Header = () => {
     //Unscribe when component unmounts
     return () => unsubscribe()
   }, [])
+  const handleLangChange = e => {
+    console.log(e.target)
+    dispatch(changeLang(e.target.value))
+  }
+  const handleGptSearchClick = () => {
+    //toggle gpt search
+    dispatch(toggleGptSearchView())
+  }
   return (
     <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
       <img className="w-24" src={LOGO} alt="logo"></img>
       {user && (
         <div className="flex p-2">
+          {showGptSearch && (
+            <select
+              className="p-2 m-2 bg-gray-800 text-white"
+              onChange={handleLangChange}
+            >
+              {SUPPORTED_LANG.map(lang => (
+                <option key={lang.identifier}>{lang.name}</option>
+              ))}
+            </select>
+          )}
+          <button
+            className="py-2 px-3 bg-blue-600 rounded-lg text-white mx-4 my-2"
+            onClick={handleGptSearchClick}
+          >
+            GPT Search
+          </button>
           <img
             className="w-10 h-10 "
             src={user?.photoUrl ? user.photoUrl : photoURL}

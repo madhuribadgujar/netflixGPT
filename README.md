@@ -49,3 +49,6 @@
   - eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiMTdiZWYzYjA5MTUwM2RkN2YxYzQyYjZjNGIyYzY5MCIsIm5iZiI6MTczOTUyMjE5MC40MzYsInN1YiI6IjY3YWYwMDhlZjEyY2VjNmUzMDFjYjZkMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.4r5-UiIlz0CqXPvv0SkocSGdF1rbOGJHWOGtpHPvjkk
 - Api KEY
   - b17bef3b091503dd7f1c42b6c4b2c690
+
+  # GPT Search feature
+  - add link in header

@@ -4,7 +4,7 @@ import { addTrailerVideo } from '../utils/movieSlice'
 import { useEffect } from 'react'
 
 const useMovieTrailer = movieId => {
-  console.log(movieId, 'movieId')
+  // console.log(movieId, 'movieId')
   const dispatch = useDispatch()
   // const trailerVideo = useSelector(store => store.movies?.trailerVideo)
   //feth trailer

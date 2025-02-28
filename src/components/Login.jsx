@@ -9,6 +9,7 @@ import {
 } from 'firebase/auth'
 import { useDispatch } from 'react-redux'
 import { addUser } from '../utils/userSlice'
+import { BGURL } from '../utils/constants'
 
 const Login = () => {
   const [isSigninForm, setisSigninForm] = useState(true)
@@ -100,7 +101,7 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img src="https://assets.nflxext.com/ffe/siteui/vlv3/638e9299-0637-42d1-ba39-54ade4cf2bf6/web/IN-en-20250203-TRIFECTA-perspective_46eb8857-face-4ea6-b901-dbf22b461369_small.jpg"></img>
+        <img src={BGURL}></img>
       </div>
       <form
         onSubmit={e => e.preventDefault()}
