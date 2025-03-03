@@ -8,7 +8,7 @@ const MovieCard = ({ posterPath }) => {
       <img
         alt="Movie Cart"
         src={IMG_CDN + posterPath}
-        className="max-w-none w-[150px]"
+        className="max-w-none w-20 md:w-[150px]"
       />
     </div>
   )
