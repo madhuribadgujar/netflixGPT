@@ -8,7 +8,7 @@ import SecondaryContainer from './SecondaryContainer'
 
 const Browse = () => {
   const showGptSearch = useSelector(state => state.gpt.showGptSearch)
-  console.log(showGptSearch, 'showGptSearch')
+  // console.log(showGptSearch, 'showGptSearch')
   //Fetch data from TMDB api and update store
   useNowPlayingMovies()
   useNowPopulerMovies()

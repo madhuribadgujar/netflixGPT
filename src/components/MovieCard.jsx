@@ -1,7 +1,8 @@
 import { IMG_CDN } from '../utils/constants'
 
 const MovieCard = ({ posterPath }) => {
-  console.log(posterPath, 'posterPath')
+  //console.log(posterPath, 'posterPath')
+  if (!posterPath) return null
   return (
     <div className=" pr-4">
       <img

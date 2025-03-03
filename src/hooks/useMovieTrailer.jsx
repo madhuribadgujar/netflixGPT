@@ -8,6 +8,7 @@ const useMovieTrailer = movieId => {
   const dispatch = useDispatch()
   // const trailerVideo = useSelector(store => store.movies?.trailerVideo)
   //feth trailer
+  const trailerVideo = useSelector(store => store.movies.trailerVideo)
 
   const getVideos = async () => {
     const data = await fetch(
@@ -22,7 +23,7 @@ const useMovieTrailer = movieId => {
     dispatch(addTrailerVideo(trailer))
   }
   useEffect(() => {
-    getVideos()
+    !trailerVideo && getVideos()
   }, [])
 }
 

@@ -52,3 +52,8 @@
 
   # GPT Search feature
   - add link in header
+  - implemet multilang feature
+  - https://platform.openai.com
+  - click on key on cust-name xreate app key
+  - install npm openai(npm i -openai)
+

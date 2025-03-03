@@ -71,12 +71,22 @@ const Header = () => {
               ))}
             </select>
           )}
-          <button
-            className="py-2 px-3 bg-blue-600 rounded-lg text-white mx-4 my-2"
-            onClick={handleGptSearchClick}
-          >
-            GPT Search
-          </button>
+          {showGptSearch && (
+            <button
+              className="py-2 px-3 bg-blue-600 rounded-lg text-white mx-4 my-2"
+              onClick={handleGptSearchClick}
+            >
+              Home
+            </button>
+          )}
+          {!showGptSearch && (
+            <button
+              className="py-2 px-3 bg-blue-600 rounded-lg text-white mx-4 my-2"
+              onClick={handleGptSearchClick}
+            >
+              GPT Search
+            </button>
+          )}
           <img
             className="w-10 h-10 "
             src={user?.photoUrl ? user.photoUrl : photoURL}
